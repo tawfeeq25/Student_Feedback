@@ -1,7 +1,7 @@
 #admincont{
     background-color: #fff;
     width:100%;
-    height:100%;
+    height:100%;user-select: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#5B25F5;
     position: fixed;
@@ -21,15 +21,20 @@
 }
 #nav-cont{
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 #nav-cont ul{
     list-style-type: none;
+   
+    width:100%;
+    height: 100%;
 }
 #nav-cont li{
     cursor: pointer;
+    
+    width:100%;
     color:#9792c7;
-    padding:30px;font-size: 20px;
+    padding:30px;font-size: 21px;
 }
 #nav-bot{
     display: flex;
@@ -47,17 +52,16 @@
     font-size: 20px;
 }
 #admin-con{
-    background-color: #f5f5fd;
+   
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 5% 95%;
 }
 #admin-top{
     background-color: #fff;
 }
 #admin-cont{
     background-color: #f5f5fd;
-    border-top-left-radius: 20px;
-    border-top-right-radius:20px ;
-    width:100%;
-    height:100vh;
+    border-radius: 20px;
+    width:99%;
+    height:92vh;
 }
