@@ -1,0 +1,63 @@
+#admincont{
+    background-color: #fff;
+    width:100%;
+    height:100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#5B25F5;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+#admin-nav{
+    background-color: #fff;
+    height: 100%;
+    width:100%;
+    display:grid;
+    grid-template-rows: 25% 50% 25%;
+    font-weight: 600;
+}
+#nav-top{
+    display: flex;
+}
+#nav-cont{
+    display: flex;
+    justify-content: center;
+}
+#nav-cont ul{
+    list-style-type: none;
+}
+#nav-cont li{
+    cursor: pointer;
+    color:#9792c7;
+    padding:30px;font-size: 20px;
+}
+#nav-bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav-bot button{
+    background-color: #5b25f5;
+    color:#fff;
+    border:none;
+    padding:15px;
+    cursor:pointer;
+    width:65%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+#admin-con{
+    background-color: #f5f5fd;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+#admin-top{
+    background-color: #fff;
+}
+#admin-cont{
+    background-color: #f5f5fd;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px ;
+    width:100%;
+    height:100vh;
+}
