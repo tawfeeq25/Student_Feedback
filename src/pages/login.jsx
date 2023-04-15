@@ -36,10 +36,10 @@ const Login=()=>{
 			</div>
 			<div id="side2">
 				<div id="side2-top">
-				<h1>M.I.E.T Engineering College</h1>
+				<h1>XYZ College</h1>
 				</div>
 				<div id="side2-middle">
-				<img src={feed}/>
+				
 				</div>
 				<div id="side2-bottom">
 				<h1>Student Feedback System</h1>

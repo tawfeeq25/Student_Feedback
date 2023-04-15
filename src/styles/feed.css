@@ -1,0 +1,48 @@
+#feedcont{
+    background-color: #eeeeee;
+    width:100%;
+    height:100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;overflow-y: scroll;
+
+    justify-content: center;align-items: center;
+   
+}
+#feedques{
+    background-color: transparent;
+    height: 95vh;
+    width:85%;
+    
+    display: block;
+}
+#ques{
+    background-color: #f9f9f9;
+    width:100%;
+    color: #797676;
+    height:auto;
+    margin:10px;
+    display: grid;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    grid-template-rows: 40% 60%;
+}
+#quest{
+    
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    
+}
+#markk{
+    background-color: red;
+    display: flex;
+}
+#quest p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;padding:20px;
+    color:#000000;
+}
+input[type="radio"]{
+	cursor: pointer;transform:scale(1.5);
+	accent-color: #2D30E1;
+
+}
