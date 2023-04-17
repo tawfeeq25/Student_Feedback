@@ -1,7 +1,7 @@
 import '../../styles/feed.css';//importing css for this page
 //feedback page code
 const question=['Question 1','Question 2','Question 3','Question 4','Question 5'];//set of question for feedback
-const subjects=['Sub1','Sub2','Sub3','Sub4','Sub5'];//set of subjects
+const subjects=['Sub1','Sub2','Sub3','Sub4','Sub5','Sub3','Sub4','Sub5'];//set of subjects
 var count=0;
 const Choice=(props)=>{
     return(<>
@@ -34,7 +34,6 @@ const Qs=(props)=>
                 </div>
                 <div id="choice">
                 <div id="mark">
-                <div id="markk"><span class="one">1</span><span class="two">2</span><span class="three">3</span><span class="four">4</span><span class="five">5</span></div><br/>
                <Choi/>
                 </div>
                 </div>
