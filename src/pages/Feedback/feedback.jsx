@@ -47,7 +47,9 @@ function Ques(){return (
 const Feed=()=>{
     return(<>
     <div id="feedcont" className="box">
+    
         <div id="feedques">
+            
             <form>
             <Ques/>
             <div id="submit">
