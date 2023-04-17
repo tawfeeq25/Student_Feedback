@@ -9,11 +9,11 @@ const Choice=(props)=>{
 		        <div id="ch">
                 <div id="sub">{props.name}</div>
                 <div id="choi">
-                <input type="radio"  id="choi" name="val"  value="1"  required />
-		        <input type="radio"   id="choi" name="val" value="2" />
-		        <input type="radio"   id="choi" name="val" value="3" checked/>
-		        <input type="radio"   id="choi" name="val" value="4" />
-		        <input type="radio"   id="choi" name="val" value="5"  />
+                <input type="radio"  id="choi" name="val"  value="1"  required /><span id="num">1</span>
+		        <input type="radio"   id="choi" name="val" value="2" /><span id="num">2</span>
+		        <input type="radio"   id="choi" name="val" value="3" checked/><span id="num">3</span>
+		        <input type="radio"   id="choi" name="val" value="4" /><span id="num">4</span>
+		        <input type="radio"   id="choi" name="val" value="5"  /><span id="num">5</span>
                 </div>
 		        
 		            </div>
@@ -48,7 +48,13 @@ const Feed=()=>{
     return(<>
     <div id="feedcont" className="box">
         <div id="feedques">
+            <form>
             <Ques/>
+            <div id="submit">
+                <input type="submit" value="submit"/>
+            </div>
+            </form>
+           
         </div>
     </div>
     </>)
