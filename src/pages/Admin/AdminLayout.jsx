@@ -6,49 +6,40 @@ const AdminLayout=()=>{
     var [nav,setNav]=useState('dash');
     useEffect(()=>{
         if(nav=="dash"){
-            document.getElementById("dash").style="color:#5B25F5;font-weight:bold;";
-            document.getElementById("ques").style="color:#9792c7;font-weight:normal;";
-            document.getElementById("resp").style="color:#9792c7;font-weight:normal;";
+           
 
 
         }   
         else if(nav=="ques"){
-            document.getElementById("dash").style="color:#9792c7;font-weight:normal;";
-            document.getElementById("ques").style="color:#5B25F5;font-weight:bold;";
-            document.getElementById("resp").style="color:#9792c7;font-weight:normal;";
+           
         }
         else if(nav=="resp"){
-            document.getElementById("dash").style="color:#9792c7;font-weight:normal;";
-            document.getElementById("ques").style="color:#9792c7;font-weight:normal;";
-            document.getElementById("resp").style="color:#5B25F5;font-weight:bold;";
+           
         }
     })
     return(<>
-       <div id="admincont" className="box">
-           <div id="admin-nav">
-                <div id="nav-top">
+        <div id="adminpanel" class="box">
+            <div id="admin-sidenav">
+                    <div id="side-top">
 
-                </div>
-                <div id="nav-cont">
-                    <ul>
-                        <li id="dash" onClick={()=>{setNav('dash')}}>Dashboard</li>
-                        <li id="ques" onClick={()=>{setNav('ques')}}>Question</li>
-                        <li id="resp" onClick={()=>{setNav('resp')}}>Response</li>
-                    </ul>
-                </div>
-                <div id="nav-bot">
-                    <button>Log out</button>
-                </div>
-           </div>
-           <div id="admin-con">
-                <div id="admin-top">
+                    </div>
+                    <div id="side-cont">
+                        <ol>
+                            <li>Dashboard</li>
+                            <li>Questions</li>
+                            <li>Responses</li>
+                        </ol>
+                    </div>
+                    <div id="side-bot">
 
-                </div>
-                <div id="admin-cont">
-                    
-                </div>
-           </div>
-       </div>
+                    </div>
+            </div>
+            <div id="admin-cont">
+                    <div id="admin-inner">
+                        <div id="staff"></div>
+                    </div>
+            </div>
+        </div>
     </>)
 }
 export default AdminLayout;

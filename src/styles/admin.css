@@ -1,67 +1,35 @@
-#admincont{
-    background-color: #fff;
+#adminpanel{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to top right, #7c89d5, #f599a5);
     width:100%;
-    height:100%;user-select: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#5B25F5;
+    height:100vh;
     position: fixed;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 25% 75%;
 }
-#admin-nav{
-    background-color: #fff;
-    height: 100%;
+#admin-sidenav{
+    background-color: white;
     width:100%;
-    display:grid;
-    grid-template-rows: 25% 50% 25%;
-    font-weight: 600;
+    height:100%;
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
 }
-#nav-top{
-    display: flex;
-}
-#nav-cont{
-    display: flex;
-    justify-content: left;
-}
-#nav-cont ul{
-    list-style-type: none;
-   
-    width:100%;
-    height: 100%;
-}
-#nav-cont li{
-    cursor: pointer;
-    
-    width:100%;
-    color:#9792c7;
-    padding:30px;font-size: 21px;
-}
-#nav-bot{
+#admin-cont{
+    background-color: transparent;
+    background-color: #f6f6fc;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#nav-bot button{
-    background-color: #5b25f5;
-    color:#fff;
-    border:none;
-    padding:15px;
-    cursor:pointer;
-    width:65%;
-    border-radius: 15px;
-    font-size: 20px;
-}
-#admin-con{
+#admin-inner{
    
-    display: grid;
-    grid-template-rows: 5% 95%;
+    width:98%;
+    height:90%;
 }
-#admin-top{
-    background-color: #fff;
-}
-#admin-cont{
-    background-color: #f5f5fd;
-    border-radius: 20px;
-    width:99%;
-    height:92vh;
+#staff{
+    box-shadow: 0px 0px 22px -8px #808080;
+    background-color: white;
+    border-radius: 10px;
+    width:40%;
+    height:40%;
 }
