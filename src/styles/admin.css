@@ -22,27 +22,65 @@
     align-items: center;
 }
 #dash-inner{
-   background-color: red;
+   
     width:98%;
     height:93%;
     display: grid;
     grid-template-rows: 15% 85%;
 }
 #dash-nav{
-    background-color:yellow;
+    
 }
 #dash-cont{
-    background-color: pink;
+  
     display: grid;
     grid-template-rows: 70% 30%;
 }
 #dash-cont-staff{
-    background-color:orange;
+  
+    display:grid;
+    grid-template-columns: 50% 50%;
 }
-#staff{
+#dash-cont-st,#dash-att-count,#dash-natt-count{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dash-count{
+   
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+#staff-list{
     box-shadow: 0px 0px 22px -8px #808080;
     background-color: white;
     border-radius: 10px;
-    width:40%;
-    height:40%;
+    width:95%;
+    height:100%;
+}
+#att,#natt{
+    box-shadow: 0px 0px 22px -8px #808080;
+    background-color: white;
+    border-radius: 10px;
+    width:95%;
+    height:95%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+#dash-print{
+    
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#print{
+    background-color: green;
+    padding:25px;
+    width:24%;text-align: center;
+    border:none;
+    border-radius: 15px;
+    color:white;
+    font-size: 20px;margin-right: 15px;
+    font-weight: bold;
 }

@@ -42,14 +42,30 @@ const AdminLayout=()=>{
                             <div id="dash-cont">
                                 <div id="dash-cont-staff">
                                     <div id="dash-cont-st">
+                                        <div id="staff-list">
 
+                                        </div>
                                     </div>
                                     <div id="dash-count">
-                                        
+                                        <div id="dash-att-count">
+                                            <div id="att">
+                                                <div id="att-top">
+
+                                                </div>
+                                                <div id="att-cont">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dash-natt-count">
+                                            <div id="natt">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="dash-print">
-
+                                    <button id="print">Download PDF</button>
                                 </div>
                             </div>
                     </div>
