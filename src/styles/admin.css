@@ -21,10 +21,23 @@
     justify-content: center;
     align-items: center;
 }
-#admin-inner{
-   
+#dash-inner{
+   background-color: red;
     width:98%;
-    height:90%;
+    height:93%;
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+#dash-nav{
+    background-color:yellow;
+}
+#dash-cont{
+    background-color: pink;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+#dash-cont-staff{
+    background-color:orange;
 }
 #staff{
     box-shadow: 0px 0px 22px -8px #808080;
