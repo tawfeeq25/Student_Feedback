@@ -47,7 +47,10 @@ function Ques(){return (
 const Feed=()=>{
     return(<>
     <div id="feedcont" className="box">
-    
+        <div id="feed-top">
+            <h1>Student Feedback - SEM VI(2022-2023)</h1>
+        </div>
+        <div id="feed-cont">
         <div id="feedques">
             
             <form>
@@ -56,8 +59,10 @@ const Feed=()=>{
                 <input type="submit" value="submit"/>
             </div>
             </form>
-           
+            
+            </div>
         </div>
+       
     </div>
     </>)
 }
