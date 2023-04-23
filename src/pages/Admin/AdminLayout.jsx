@@ -57,25 +57,58 @@ const AdminLayout=()=>{
                                                 <tbody>
                                                 <tr>
                                                
-                                                <td>6,000</td>
-                                                <td>110</td>
-                                                <td>1.8%</td>
+                                                <td>AI</td>
+                                                <td>Barveen</td>
+                                                <td>80</td>
                                                
                                                 </tr>
                                                 <tr>
                                                
-                                                <td>2,200</td>
-                                                <td>500</td>
-                                                <td>22%</td>
+                                                <td>DS</td>
+                                                <td>Manikandan</td>
+                                                <td>85</td>
                                                
                                                 </tr>
                                                 <tr>
                                                
-                                                <td>13,500</td>
-                                                <td>900</td>
-                                                <td>6.7%</td>
+                                                <td>CD</td>
+                                                <td>Shanmugapriya</td>
+                                                <td>80</td>
                                                 
                                                  </tr>
+                                                 <tr>
+                                               
+                                                <td>IP</td>
+                                                <td>Issac</td>
+                                                <td>80</td>
+                                                
+                                                 </tr><tr>
+                                               
+                                               <td>MC</td>
+                                               <td>Faizal</td>
+                                               <td>80</td>
+                                               
+                                                </tr>
+                                                <tr>
+                                               
+                                                <td>IP LAB</td>
+                                                <td>Manikandan</td>
+                                                <td>80</td>
+                                                
+                                                 </tr>
+                                                 <tr>
+                                               
+                                                <td>MAD LAB</td>
+                                                <td>Getsi</td>
+                                                <td>80</td>
+                                                
+                                                 </tr><tr>
+                                               
+                                               <td>PC</td>
+                                               <td>Jeevanantham</td>
+                                               <td>80</td>
+                                               
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>

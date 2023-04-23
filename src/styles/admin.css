@@ -94,7 +94,8 @@ table tbody  {
     overflow-y: auto;
 }
 table tbody td{
-   
+ 
+   border-right: 1px solid black;
     text-align: center;
     font-size: 20px;
     color:black;
