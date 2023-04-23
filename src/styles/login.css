@@ -22,7 +22,7 @@ body,.box{
 #side2{
 	width: 100%;height: 100%;
 	background: rgb(141,112,231);
-background: radial-gradient(circle, rgba(141,112,231,1) 0%, rgb(100, 93, 122) 35%);
+background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
 	display: grid;
 	grid-template-rows:30% 40% 30%;
 }

@@ -1,9 +1,9 @@
 import '../../styles/admin.css';
 import logo from '../../img/logo.png';
-import logout from '../../img/logout.png';
+import { createRoot } from 'react-dom/client';
 import { useState,useEffect } from 'react';
 import Dash from './Dash';
-import { createRoot } from 'react-dom/client';
+import Quest from './Quest';
 
 const AdminLayout=()=>{
     var [nav,setNav]=useState('dash');
@@ -20,7 +20,9 @@ const AdminLayout=()=>{
             document.getElementById("dash").style="background-color:white";
             document.getElementById("questt").style="background-color:rgba(141,112,231,1);color:white;";
             document.getElementById("resp").style="background-color:white";
-            createRoot(document.getElementById('admin-cont-box')).render(<><h1>das</h1></>);
+            createRoot(document.getElementById('admin-cont-box')).render(<><Quest/></>);
+           createRoot(document.getElementById("admin-cont-top")).render(<><h2>Questions</h2></>);
+
         }
         else if(nav=="resp"){
             document.getElementById("dash").style="background-color:white";
