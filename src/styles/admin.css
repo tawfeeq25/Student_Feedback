@@ -1,6 +1,6 @@
 #adminpanel{
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top right, #7c89d5, #f599a5);
+    user-select: none;
     width:100%;
     height:100vh;
     position: fixed;
@@ -12,42 +12,139 @@
     width:100%;
     height:100%;
     display: grid;
-    grid-template-rows: 30% 40% 30%;
+    grid-template-rows: 20% 60% 20%;
 }
-#admin-cont{
-    background-color: transparent;
-    background-color: #f6f6fc;
+#side-top,#side-bot{
+    color:rgb(100, 93, 122);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#dash-inner{
+#side-bot button{
+    width:50%;
+    color:white;
+    font-weight: bold;
+    padding:17px;
+    cursor:pointer;
+    text-align: center;
+    border:none;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(100, 93, 122);
+
+}
+#side-cont #main-nav{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    overflow-y: auto;overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
    
-    width:98%;
-    height:93%;
+}
+#sidenav-dash-inner{
+    display: none;
+}
+#side-cont #main-nav li{
+    background-color: white;
+    padding:15px;
+    width:93%;cursor: pointer;
+    color:rgb(100, 93, 122);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top:10px;
+    
+
+    font-size:20px;
+}
+#admin-cont{
+    
+    background-color: #f6f6fc;
     display: grid;
     grid-template-rows: 15% 85%;
 }
-#dash-nav{
-    display: flex;
+#admin-cont-top{
+    background-color: white;
+    width:100%;
+    height:85%;
+    display:flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    font-weight: bold;
+    font-size: 23px;color:rgb(100, 93, 122);
 }
-#sec-a,#sec-b{
-    font-size: 20px;
-   display: flex;
-   justify-content: center;
-   width:100%;
+
+#admin-das{
+   
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+#admin-das-nav{
+    display: flex;
     align-items: center;
-    height: 100%;
+    height:100%;
+    width:100%;
+
+}
+#class-nav{
+    background-color:white;
+    width:80%;border-top-right-radius: 15px;
+    width:80%;border-bottom-right-radius: 15px;
+    height:auto;
+   
+}
+#class-nav ol{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    overflow-y: auto;overflow-x: hidden;
+    align-items: center;
+    justify-content: center; 
+}
+#year-1,#year-2,#year-3,#year-4{
+    background-color: white;
+    padding:15px;
+    width:93%;cursor: pointer;
+    color:rgb(100, 93, 122);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top:10px;
+    font-size:20px;
+}
+#class-nav ol ol{
+    display: none;
+  
+    padding:10px;
+    width:93%;cursor: pointer;
+    color:rgb(100, 93, 122);
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 15px;
     
+
+}
+#class-nav ol ol li{
+    margin:5px;
+}
+#admin-das-cont{
+    background-color: transparent;
+    display: grid;
+    width:100%;
+    height:100%;
 }
 #dash-cont{
   
     display: grid;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 75% 25%;
 }
 #dash-cont-staff{
   
@@ -69,23 +166,23 @@
     box-shadow: 0px 0px 22px -8px #808080;
     background-color: white;
     border-radius: 10px;
-    width:95%;
+    width:97%;
     height:100%;
 }
 table 
 {
      border-collapse: collapse;
       border-spacing: 0; 
-      background-color: red;
+    
       width:100%;
       height:100%;
 }
 table thead{
-    background-color:#c9dff0;
+    background-color:rgb(100, 93, 122);
     width:100%;
     height: 15%;
     font-weight: bold;
-     color: #585858;
+     color: white;
 }
 
 table tbody  { 
@@ -96,18 +193,39 @@ table tbody  {
 table tbody td{
  
    border-right: 1px solid black;
-    text-align: center;
+   border-bottom: 1px solid grey;
+    text-align: center;font-weight: lighter;
     font-size: 20px;
-    color:black;
+    color:rgb(100, 93, 122);
 }
 #att,#natt{
     box-shadow: 0px 0px 22px -8px #808080;
     background-color: white;
     border-radius: 10px;
-    width:95%;
+    width:85%;
     height:95%;
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 40% 60%;
+}
+#att-top,#natt-top{
+    background-color: rgb(100, 93, 122);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+
+}
+#att-cont,#natt-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(100, 93, 122);
 }
 #dash-print{
     
@@ -118,7 +236,7 @@ table tbody td{
 #print{
     background-color: green;
     padding:25px;
-    width:24%;text-align: center;
+    width:34%;text-align: center;
     border:none;
     border-radius: 15px;
     color:white;
