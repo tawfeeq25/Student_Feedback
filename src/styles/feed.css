@@ -8,7 +8,7 @@
    
 }
 #feed-top{
-    background-color: rgba(104,65,218,1);
+    background-color: #007EA7;
     display: flex;
     color:white;
     justify-content: center;
@@ -32,7 +32,7 @@
 #ques{
     background-color: #f9f9f9;
     width:100%;
-    color: #797676;
+    color: #333333;
     margin:10px;border-radius: 20px;
     display: grid;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     grid-auto-rows: max-content;
@@ -49,7 +49,7 @@
 #quest p{
     font-family:OpenSans, Arial, Helvetica, sans-serif;
     font-size: 25px;padding:20px;
-    color:#000000;
+    color:#333333;
 }
 #ch{
     display: grid;
@@ -74,7 +74,7 @@ input[type="radio"]{
 	cursor: pointer;
     transform:scale(1.7);
     margin-left: 50px;vertical-align: middle;
-	accent-color: rgba(104,65,218,1);
+	accent-color: #007EA7;
 }
 #num{
     color:black;
@@ -91,7 +91,7 @@ input[type="radio"]{
     align-items: center;
 }
 #submit input[type="submit"]{
-    background-color: rgba(104,65,218,1);
+    background-color: #007EA7;
     color:white;
     padding:20px;
     width:15%;

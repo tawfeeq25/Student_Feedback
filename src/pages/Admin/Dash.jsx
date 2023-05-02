@@ -4,7 +4,7 @@ const Dash=()=>{
     const[sec,setSec]=useState('year-1-a');
     useEffect(()=>{
         if(year=='one'){
-            document.getElementById("year-1").style="background-color:rgba(141,112,231,1);color:white;";
+            document.getElementById("year-1").style="background-color:#007EA7;color:white;";
            document.getElementById("year-2").style="background-color:white";
            document.getElementById("year-3").style="background-color:white";
            document.getElementById("year-4").style="background-color:white";
@@ -16,7 +16,7 @@ const Dash=()=>{
         }
         else if(year=='two'){
             document.getElementById("year-1").style="background-color:white";
-            document.getElementById("year-2").style="background-color:rgba(141,112,231,1);color:white";
+            document.getElementById("year-2").style="background-color:#007EA7;color:white";
             document.getElementById("year-3").style="background-color:white";
             document.getElementById("year-4").style="background-color:white";
             document.getElementById("year1").style="display:none";
@@ -29,7 +29,7 @@ const Dash=()=>{
         else if(year=='three'){
             document.getElementById("year-1").style="background-color:white";
             document.getElementById("year-2").style="background-color:white";
-            document.getElementById("year-3").style="background-color:rgba(141,112,231,1);color:white";
+            document.getElementById("year-3").style="background-color:#007EA7;color:white";
             document.getElementById("year-4").style="background-color:white";
             document.getElementById("year1").style="display:none";
             document.getElementById("year2").style="display:none";
@@ -42,7 +42,7 @@ const Dash=()=>{
             document.getElementById("year-1").style="background-color:white";
             document.getElementById("year-2").style="background-color:white";
             document.getElementById("year-3").style="background-color:white";
-            document.getElementById("year-4").style="background-color:rgba(141,112,231,1);color:white";
+            document.getElementById("year-4").style="background-color:#007EA7;color:white";
             document.getElementById("year1").style="display:none";
             document.getElementById("year2").style="display:none";
             document.getElementById("year3").style="display:none";

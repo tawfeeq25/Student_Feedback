@@ -21,8 +21,7 @@ body,.box{
 }
 #side2{
 	width: 100%;height: 100%;
-	background: rgb(141,112,231);
-background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
+	background-color:#007EA7;
 	display: grid;
 	grid-template-rows:30% 40% 30%;
 }
@@ -30,7 +29,7 @@ background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
 	display: flex;font-family: sans-serif;
 	justify-content:center;
 	align-items:center;
-	color:white;
+	color:#FFFFFF;
 }
 
 #side2-middle img{
@@ -43,7 +42,7 @@ background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
 	height: 70vh;
 }
 #lform h1{
-	font-family: sans-serif;color:#6841DA;
+	font-family: sans-serif;color:#007EA7;
 	text-align: left;font-size: 40px;
 }
 #lform p{
@@ -76,7 +75,7 @@ background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
 }
 #lform form input[type="text"]:focus,#lform form input[type="password"]:focus{
 	padding: 20px;
-	border:3px solid #6841DA;
+	border:3px solid #007EA7;
 	border-radius: 10px;
 	width: 70%;
 	outline: none;
@@ -85,7 +84,7 @@ background: radial-gradient(circle, rgb(141,112,231)  0%, #6841DA 35%);
 	cursor: pointer;
 }
 #lform form input[type="submit"]{
-	background-color: #6841DA;
+	background-color:#007EA7 ;
 	width:60%;
 	padding:20px;cursor:pointer;
 	border:none;font-weight: bold;

@@ -4,12 +4,12 @@ import { createRoot } from 'react-dom/client';
 import { useState,useEffect } from 'react';
 import Dash from './Dash';
 import Quest from './Quest';
-
+import Resp from './response';
 const AdminLayout=()=>{
     var [nav,setNav]=useState('dash');
     useEffect(()=>{
         if(nav=="dash"){
-           document.getElementById("dash").style="background-color:rgba(141,112,231,1);color:white;";
+           document.getElementById("dash").style="background-color:#007EA7;color:white;";
            document.getElementById("questt").style="background-color:white";
            document.getElementById("resp").style="background-color:white";
            createRoot(document.getElementById('admin-cont-box')).render(<Dash/>);
@@ -18,7 +18,7 @@ const AdminLayout=()=>{
         }   
         else if(nav=="ques"){
             document.getElementById("dash").style="background-color:white";
-            document.getElementById("questt").style="background-color:rgba(141,112,231,1);color:white;";
+            document.getElementById("questt").style="background-color:#007EA7;color:white;";
             document.getElementById("resp").style="background-color:white";
             createRoot(document.getElementById('admin-cont-box')).render(<><Quest/></>);
            createRoot(document.getElementById("admin-cont-top")).render(<><h2>Questions</h2></>);
@@ -27,8 +27,8 @@ const AdminLayout=()=>{
         else if(nav=="resp"){
             document.getElementById("dash").style="background-color:white";
             document.getElementById("questt").style="background-color:white";
-            document.getElementById("resp").style="background-color:rgba(141,112,231,1);color:white;";
-            createRoot(document.getElementById('admin-cont-box')).render(<><h1>das</h1></>);
+            document.getElementById("resp").style="background-color:#007EA7;color:white;";
+            createRoot(document.getElementById('admin-cont-box')).render(<Resp/>);
             
         }
     })
