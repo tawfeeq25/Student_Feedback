@@ -6,9 +6,9 @@ var count=0;
 const Choice=(props)=>{
     return(<>
 		       
-		        <div id="ch">
-                <div id="sub">{props.name}</div>
-                <div id="choi">
+		        <div id="sch">
+                <div id="ssub">{props.name}</div>
+                <div id="schoi">
                 <input type="radio"  id="choi" name="val"  value="1"  required /><span id="num">1</span>
 		        <input type="radio"   id="choi" name="val" value="2" /><span id="num">2</span>
 		        <input type="radio"   id="choi" name="val" value="3" checked/><span id="num">3</span>
@@ -28,12 +28,12 @@ const Qs=(props)=>
 {
     count=count+1;
     return(<>
-         <div id="ques">
-                <div id="quest">
+         <div id="sques">
+                <div id="squest">
                 <p>{count}.{props.name}</p>
                 </div>
-                <div id="choice">
-                <div id="mark">
+                <div id="schoice">
+                <div id="smark">
                <Choi/>
                 </div>
                 </div>
