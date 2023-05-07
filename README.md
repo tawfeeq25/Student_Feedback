@@ -1,19 +1,15 @@
-# Student Feedback System
-
-The student feedback system is a web-based application that collects student Feedback and displays it to Admins in an effective and more understandable manner.
-
-There are two portals in this system: an admin portal and a student portal.The Feedback will be gathered via the student portal, and the admin portal will include replies, follow-up questions, and further information.
-
-## Getting Started
-
-To run student feedback system locally, follow these steps:
-
-1. Install vite development server .
-2. Clone the feedback system repository using the command `git clone https://github.com/MohamedTawfeeq25/Student_Feedback.git`.
-3. Navigate to the repository folder using the command `cd Student_Feedback`.
-4. Run the server using the command `npm run dev`.
-5. The server will be started on `localhost:5173` by default.
-
-## Technologies Used
-
-- React JS
+<h1>College Student Feedback System</h1>
+<p>This is a web application for collecting feedback from college students on various courses and instructors. The application is built using React JS for the frontend, Node JS and Express JS for the backend, and MySQL for the database.</p>
+<h1>Features</h1>
+<ul>
+  <li>Students can log in and provide feedback on their courses and instructors</li>
+  <li>Admin can log in and view the feedback provided by their students</li>
+  <li>Admins can log in and manage courses, instructors, and student feedback</li>
+  
+ </ul>
+ <h1>Prerequisites</h1>
+ <p>Before running the application, make sure you have the following installed:</p>
+ <ul>
+  <li>Node JS</li>
+  <li>MYSQL</li>
+  </ul>
