@@ -13,12 +13,49 @@
     width:95%;
     padding:15px;
     border-radius: 15px ;
-    height:18%;
+    height:20%;
     margin:10px;
     display: grid;
     border:1px solid #DADADA;
     color:#444444;
+    grid-template-rows: 50% 50%;
+}
+#quest-top{
+    width:100%;
+    height:100%;
+    display: grid;
     grid-template-columns: 70% 15% 15%;
+}
+.quest-bot{
+    display: none;
+  
+    width:99%;
+    justify-content: right;
+    align-items: center;
+    height:100%;
+   
+    padding:10px;
+}
+.quest-bot button{
+    padding:10px;
+    margin-right:10px;
+    width:15%;
+    border:none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color:white;
+}
+.qst-cans{
+    background-color: 	#DC3545;
+    cursor: pointer;
+    
+}
+.qst-save{
+    background-color: #28A745;
+    cursor: pointer;
+
+
 }
 #questqs{
     display: flex;
@@ -40,6 +77,21 @@
 #questedit button,#questdelete button{
  background-color: transparent;
  border:none;cursor: pointer;
+}
+#eport{
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    width:100%;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+#edit{
+    background-color: red;
+    width:80%;
+    height:30vh;
+
 }
 #respbox{
     background-color: #FFFFFF;

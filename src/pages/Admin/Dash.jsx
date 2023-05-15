@@ -1,7 +1,10 @@
 import { useState ,useEffect} from "react";
-const Dash=()=>{
+
+const Dash=(props)=>{
+    
     const[year,setYear]=useState('one');
     const[sec,setSec]=useState('year-1-a');
+   
     useEffect(()=>{
         if(year=='one'){
             document.getElementById("year-1").style="background-color:#007EA7;color:white;";
@@ -50,105 +53,7 @@ const Dash=()=>{
            setSec("year-4-a");
 
         }
-        if(sec=='year-1-a'){
-            /*
-            document.getElementById("year-1-a").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        }
-        else if(sec=='year-1-b'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        }
-        else if(sec=='year-2-a'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122);";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        } else if(sec=='year-2-b'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        } else if(sec=='year-3-a'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        } else if(sec=='year-3-b'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        } else if(sec=='year-4-a'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            document.getElementById("year-4-b").style="border:none;color:rgb(100, 93, 122)";
-            */
-
-        } else if(sec=='year-4-b'){
-            /*
-            document.getElementById("year-1-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-1-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-2-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-3-b").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-a").style="border:none;color:rgb(100, 93, 122)";
-            document.getElementById("year-4-b").style="border-bottom:2px solid rgba(141,112,231,1);color:rgba(141,112,231,1);";
-            */
-
-        }
+       
     })
     return(<>
         <div id="admin-das">

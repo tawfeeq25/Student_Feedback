@@ -20,7 +20,10 @@ var Sub=(props)=>{
 var Subj=()=>{
      return subject.map((i,j)=>{return(<><Sub subj={i} mark={mark[j]}/></>)})
 }
-const Resp=()=>{
+const Resp=(props)=>{
+    function Fetch(){
+        fetch("http://localhost:2000/")
+    }
         let Qs=(props)=>{
             count=count+1;
             return(
