@@ -31,6 +31,8 @@ const AdminLayout=()=>{
             document.getElementById("questt").style="background-color:white";
             document.getElementById("resp").style="background-color:#007EA7;color:white;";
             createRoot(document.getElementById('admin-cont-box')).render(<Resp  code={location.state.code}/>);
+           createRoot(document.getElementById("admin-cont-top")).render(<><h2>Responses</h2></>);
+
             
         }
     })

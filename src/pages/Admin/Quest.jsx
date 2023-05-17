@@ -55,11 +55,30 @@ const Quest=(props)=>{
                 .then(res=>res.json())
                 .then(res=>{
                     if(res.message=="question updated"){
-                         setStatus("loaded");
+                         alert("updated");//1.Does the Faculty come prepared on Lessons ?
+                         window.location.reload();
 
                     }
                 })
                 .catch((err)=>{console.log(err)});
+            }
+            function Delete(e){
+                if(window.confirm("Do You Want To Delete The Question")==true){
+                    var data={data:e.currentTarget.id};
+                    var dat={method:"DELETE",headers:{'Content-Type':'Application/json','Accept':'Application/json',},body:JSON.stringify(data)}
+                    fetch("http://localhost:2000/admin/question/delete",dat)
+                    .then(res=>res.json())
+                    .then((res)=>{
+                        if(res.message=="question deleted"){
+                            alert("question deleted");
+                            window.location.reload();
+                        }
+                    })
+                    .catch((err)=>{
+                        console.log(err);
+                    })
+                }
+                
             }
             return(
                 <>
@@ -72,7 +91,7 @@ const Quest=(props)=>{
                         <button id={props.data} onClick={Edit}><FaPen style={{color: '#555555', fontSize: '28px'}}/></button>
                     </div>
                     <div id="questdelete">
-                    <button id={props.data}><FiTrash2 style={{color: '#555555', fontSize: '28px'}}/></button>
+                    <button id={props.data} onClick={Delete}><FiTrash2 style={{color: '#555555', fontSize: '28px'}}/></button>
                     </div>
                     </div>
                     <div id={props.data+"bot"} className="quest-bot">

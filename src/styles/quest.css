@@ -99,7 +99,7 @@
     padding:15px;
     border-radius: 15px ;
     height:auto;
-    margin:10px;
+    
     display: grid;
     grid-template-rows:auto auto;
     border:1px solid #DADADA;
@@ -139,9 +139,7 @@
 #rquest{
     width:100%;
    height: 85vh;
-    
-   display:grid;
-   grid-template-rows:10% 90%;
+    display:flex;
 }
 #resp-top{
     display: flex;
