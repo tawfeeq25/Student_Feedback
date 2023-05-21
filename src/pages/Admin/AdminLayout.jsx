@@ -37,7 +37,7 @@ const AdminLayout=()=>{
         }
     })
     return(<>
-        <div id="adminpanel" class="box">
+        <div id="adminpanel" className="box">
             <div id="admin-sidenav">
                     <div id="side-top">
                         <h1>ADMIN PANEL</h1>

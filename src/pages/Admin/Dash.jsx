@@ -1,11 +1,60 @@
 import { useState ,useEffect} from "react";
-
+import Loader from '../loader';
+var att;
+var natt;
+var subject=[];
+var staff=[];
+var points=[];
 const Dash=(props)=>{
-    
+    const [status,setStatus]=useState('notLoaded');
     const[year,setYear]=useState('one');
     const[sec,setSec]=useState('year-1-a');
-   
+    
+   function Api(){
+       fetch("http://localhost:2000/admin/"+props.code+"/dashboard")
+       .then(res=>res.json())
+       .then(res=>{
+           if(res.status="done"){
+               att=res.attended;
+               natt=res.notAttended;
+               for(var i=0;i<res.subject.length;i++){
+                subject[i]=res.subject[i];
+                staff[i]=res.staff[i];
+                points[i]=res.percentage[i];
+               }
+               setStatus('loaded');
+               console.log(subject);
+               console.log(staff);
+               console.log(points);
+           }
+       })
+       .catch((err)=>{console.log(err)});
+   }
+   Api();
+   var Data=(props)=>{
+    return(<>
+        <tr>
+                   
+                   <td>{props.subject}</td>
+                   <td>{props.staff}</td>
+                   <td>{props.point}</td>
+                  
+         </tr>
+    </>)
+    }
+    var Dat=()=>{
+        
+        return subject.map((i,j)=>{return(<><Data subject={i} staff={staff[j]} point={points[j]}/></>)})
+    }
     useEffect(()=>{
+        if(status=="loaded"){
+            document.getElementById("dash-cont").style="display:grid";
+            document.getElementById("loading-wrapper").style="display:none";
+        }
+        else if(status=="notLoaded"){
+            document.getElementById("dash-cont").style="display:none";
+            document.getElementById("loading-wrapper").style="display:block";
+        }
         if(year=='one'){
             document.getElementById("year-1").style="background-color:#007EA7;color:white;";
            document.getElementById("year-2").style="background-color:white";
@@ -84,6 +133,7 @@ const Dash=(props)=>{
         </div>
 </div>
 <div id="admin-das-cont">
+    <Loader/>
 <div id="dash-cont">
     <div id="dash-cont-staff">
         <div id="dash-cont-st">
@@ -98,60 +148,7 @@ const Dash=(props)=>{
 
                     </thead>
                     <tbody>
-                    <tr>
-                   
-                    <td>AI</td>
-                    <td>Barveen</td>
-                    <td>80</td>
-                   
-                    </tr>
-                    <tr>
-                   
-                    <td>DS</td>
-                    <td>Manikandan</td>
-                    <td>85</td>
-                   
-                    </tr>
-                    <tr>
-                   
-                    <td>CD</td>
-                    <td>Shanmugapriya</td>
-                    <td>80</td>
-                    
-                     </tr>
-                     <tr>
-                   
-                    <td>IP</td>
-                    <td>Issac</td>
-                    <td>80</td>
-                    
-                     </tr><tr>
-                   
-                   <td>MC</td>
-                   <td>Faizal</td>
-                   <td>80</td>
-                   
-                    </tr>
-                    <tr>
-                   
-                    <td>IP LAB</td>
-                    <td>Manikandan</td>
-                    <td>80</td>
-                    
-                     </tr>
-                     <tr>
-                   
-                    <td>MAD LAB</td>
-                    <td>Getsi</td>
-                    <td>80</td>
-                    
-                     </tr><tr>
-                   
-                   <td>PC</td>
-                   <td>Jeevanantham</td>
-                   <td>80</td>
-                   
-                    </tr>
+                   <Dat/>
                     </tbody>
                 </table>
             </div>
@@ -163,7 +160,7 @@ const Dash=(props)=>{
                         <p>Attended</p>
                     </div>
                     <div id="att-cont">
-                        <p>55</p>
+                        <p>{att}</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +170,7 @@ const Dash=(props)=>{
                         <p>Not Attended</p>
                     </div>
                     <div id="natt-cont">
-                        <p>5</p>
+                        <p>{natt}</p>
                     </div>
                 </div>
             </div>

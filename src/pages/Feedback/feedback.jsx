@@ -10,7 +10,7 @@ const Choice=(props)=>{
     return(<>
 		       
 		        <div id="sch">
-                <div id="ssub">{props.name}</div>
+                <div id="ssub">{props.sub}</div>
                 <div id="schoi">
                 <input type="radio"  id={props.id} name={props.name}  value="1"  required /><span id="num">1</span>
 		        <input type="radio"   id={props.id} name={props.name} value="2" /><span id="num">2</span>
@@ -57,6 +57,7 @@ const Feed=()=>{
         fetch("http://localhost:2000/student/"+location.state.code+"/question",dat)
         .then(res=>res.json())
         .then(res=>{
+            console.log(res);
             if(res.message=="done"){
                 code=res.Answercode;
                for(var i=0;i<res.question.length;i++){
