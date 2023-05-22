@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 import Dash from './Dash';
 import Quest from './Quest';
 import Resp from './response';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const AdminLayout=()=>{
     const location=useLocation();
     console.log(location);
@@ -52,7 +52,7 @@ const AdminLayout=()=>{
                         </ol>
                     </div>
                     <div id="side-bot">
-                        <button>Log out</button>
+                        <button><Link to="/">Log out</Link></button>
                     </div>
             </div>
             <div id="admin-cont">

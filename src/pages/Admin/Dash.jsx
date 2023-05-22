@@ -1,15 +1,21 @@
 import { useState ,useEffect} from "react";
 import Loader from '../loader';
+import jsPDF from 'jspdf';
 var att;
 var natt;
 var subject=[];
 var staff=[];
 var points=[];
+
 const Dash=(props)=>{
     const [status,setStatus]=useState('notLoaded');
     const[year,setYear]=useState('one');
     const[sec,setSec]=useState('year-1-a');
-    
+    const doc = new jsPDF({
+        orientation: 'landscape',
+        unit: 'in',
+        format: [4, 2],
+    });
    function Api(){
        fetch("http://localhost:2000/admin/"+props.code+"/dashboard")
        .then(res=>res.json())
@@ -46,6 +52,18 @@ const Dash=(props)=>{
         
         return subject.map((i,j)=>{return(<><Data subject={i} staff={staff[j]} point={points[j]}/></>)})
     }
+    var Pdf=()=>{
+        return(<>
+        <h1>PDF Generated</h1>
+        </>)
+    }
+    const Generate = () => {
+		doc.html(Pdf, {
+            async callback(doc) {
+                await doc.save('pdf_name');
+            },
+        });
+	};
     useEffect(()=>{
         if(status=="loaded"){
             document.getElementById("dash-cont").style="display:grid";
@@ -177,7 +195,7 @@ const Dash=(props)=>{
         </div>
     </div>
     <div id="dash-print">
-        <button id="print">Download PDF</button>
+        <button id="print" onClick={Generate}>Download PDF</button>
     </div>
 </div>
 </div>

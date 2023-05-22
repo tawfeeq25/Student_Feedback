@@ -33,6 +33,10 @@
     background-color: 	#DC3545;
 
 }
+#side-bot button a{
+    text-decoration: none;
+    color:white;
+}
 #side-cont #main-nav{
     list-style-type: none;
     display: flex;
