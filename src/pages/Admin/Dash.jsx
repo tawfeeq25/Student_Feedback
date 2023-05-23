@@ -1,6 +1,7 @@
 import { useState ,useEffect} from "react";
 import Loader from '../loader';
-import jsPDF from 'jspdf';
+import PrintPDF from "./pdf";
+
 var att;
 var natt;
 var subject=[];
@@ -9,13 +10,8 @@ var points=[];
 
 const Dash=(props)=>{
     const [status,setStatus]=useState('notLoaded');
-    const[year,setYear]=useState('one');
+    const[year,setYear]=useState('1');
     const[sec,setSec]=useState('year-1-a');
-    const doc = new jsPDF({
-        orientation: 'landscape',
-        unit: 'in',
-        format: [4, 2],
-    });
    function Api(){
        fetch("http://localhost:2000/admin/"+props.code+"/dashboard")
        .then(res=>res.json())
@@ -52,18 +48,12 @@ const Dash=(props)=>{
         
         return subject.map((i,j)=>{return(<><Data subject={i} staff={staff[j]} point={points[j]}/></>)})
     }
-    var Pdf=()=>{
-        return(<>
-        <h1>PDF Generated</h1>
-        </>)
+   
+    function Print(){
+        PrintPDF(year,subject,points,staff)
+        
     }
-    const Generate = () => {
-		doc.html(Pdf, {
-            async callback(doc) {
-                await doc.save('pdf_name');
-            },
-        });
-	};
+      
     useEffect(()=>{
         if(status=="loaded"){
             document.getElementById("dash-cont").style="display:grid";
@@ -73,7 +63,7 @@ const Dash=(props)=>{
             document.getElementById("dash-cont").style="display:none";
             document.getElementById("loading-wrapper").style="display:block";
         }
-        if(year=='one'){
+        if(year=='1'){
             document.getElementById("year-1").style="background-color:#007EA7;color:white;";
            document.getElementById("year-2").style="background-color:white";
            document.getElementById("year-3").style="background-color:white";
@@ -84,7 +74,7 @@ const Dash=(props)=>{
            document.getElementById("year4").style="display:none";
            setSec("year-1-a");
         }
-        else if(year=='two'){
+        else if(year=='2'){
             document.getElementById("year-1").style="background-color:white";
             document.getElementById("year-2").style="background-color:#007EA7;color:white";
             document.getElementById("year-3").style="background-color:white";
@@ -96,7 +86,7 @@ const Dash=(props)=>{
            setSec("year-2-a");
 
         }
-        else if(year=='three'){
+        else if(year=='3'){
             document.getElementById("year-1").style="background-color:white";
             document.getElementById("year-2").style="background-color:white";
             document.getElementById("year-3").style="background-color:#007EA7;color:white";
@@ -108,7 +98,7 @@ const Dash=(props)=>{
            setSec("year-3-a");
 
         }
-        else if(year=='four'){
+        else if(year=='4'){
             document.getElementById("year-1").style="background-color:white";
             document.getElementById("year-2").style="background-color:white";
             document.getElementById("year-3").style="background-color:white";
@@ -127,22 +117,22 @@ const Dash=(props)=>{
 <div id="admin-das-nav">
         <div id="class-nav">
             <ol>
-                <li id="year-1" onClick={()=>{setYear('one')}}>Year 1</li>
+                <li id="year-1" onClick={()=>{setYear('1')}}>Year 1</li>
                     <ol id="year1">
                         <li id="year-1-a" onClick={(e)=>{setSec("year-1-a")}}>SEC A</li>
                         <li id="year-1-b" onClick={(e)=>{setSec("year-1-b")}}>SEC B</li>
                     </ol>
-                <li id="year-2" onClick={()=>{setYear('two')}}>Year 2</li>
+                <li id="year-2" onClick={()=>{setYear('2')}}>Year 2</li>
                 <ol id="year2">
                         <li id="year-2-a" onClick={(e)=>{setSec("year-2-a")}}>SEC A</li>
                         <li id="year-2-b" onClick={(e)=>{setSec("year-2-b")}}>SEC B</li>
                     </ol>
-                <li id="year-3" onClick={()=>{setYear('three')}}>Year 3</li>
+                <li id="year-3" onClick={()=>{setYear('3')}}>Year 3</li>
                 <ol id="year3">
                         <li id="year-3-a" onClick={(e)=>{setSec("year-3-a")}}>SEC A</li>
                         <li id="year-3-b" onClick={(e)=>{setSec("year-3-b")}}>SEC B</li>
                     </ol>
-                <li id="year-4" onClick={()=>{setYear('four')}}>Year 4</li>
+                <li id="year-4" onClick={()=>{setYear('4')}}>Year 4</li>
                 <ol id="year4">
                         <li id="year-4-a" onClick={(e)=>{setSec("year-4-a")}}>SEC A</li>
                         <li id="year-4-b" onClick={(e)=>{setSec("year-4-b")}}>SEC B</li>
@@ -195,7 +185,7 @@ const Dash=(props)=>{
         </div>
     </div>
     <div id="dash-print">
-        <button id="print" onClick={Generate}>Download PDF</button>
+        <button id="print" onClick={Print} >Download PDF</button>
     </div>
 </div>
 </div>
