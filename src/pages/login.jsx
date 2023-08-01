@@ -139,7 +139,7 @@ const Login=()=>{
 			</div>
 			<div id="side2">
 				<div id="side2-top">
-				<h1>MIET Engineering College</h1>
+				<h1>XYZ Engineering College</h1>
 				</div>
 				<div id="side2-middle">
 				
